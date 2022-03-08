@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+</head>
+<body>
+    <div class="container" style="padding: 40px; width: 80%">
+
+        <div class="header" style="display: flex; justify-content: space-between; align-items: baseline;">
+            <h1>Edit User {{info.id}}</h1>
+            <a href="/users">Home</a>
+        </div>
+        <form action="/users/{{info.id}}/update" method="POST" class="form-group">
+            <label for="new_fname">First Name:</label>
+            <input type="text" name="new_fname" class="form-control" value={{info.first_name}}>
+            <label for="new_lname">Last Name:</label>
+            <input type="text" name="new_lname" class="form-control" value={{info.last_name}}>
+            <label for="new_email" >Email:</label>
+            <input type="text" name="new_email" value={{info.email}} class="form-control">
+            <input type="submit" value="Edit Friend">
+        </form>
+    </div>
+</body>
+</html>
